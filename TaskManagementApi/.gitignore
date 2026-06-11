@@ -1,0 +1,12 @@
+# .NET Build Outputs
+bin/
+obj/
+
+# Visual Studio & VS Code tracking/caches
+.vs/
+.vscode/
+*.user
+
+# Local environment/secrets
+appsettings.Development.json
+*.env
