@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: TaskManagement.API/Dockerfile
+    ports:
+      - "5000:8080"
+    depends_on:
+      - sql
+      - redis
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=sql;Database=TaskDb;User=sa;Password=YourStrong@Passw0rd;TrustServerCertificate=True
+      - Redis__Connection=redis:6379
+
+  sql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      SA_PASSWORD: "YourStrong@Passw0rd"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+
+  redis:
+    image: redis:7
+    container_name: redis
+    ports:
+      - "6379:6379"
