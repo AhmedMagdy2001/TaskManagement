@@ -138,6 +138,7 @@ Includes:
 TaskManagement
 ├── TaskManagement.API
 ├── TaskManagement.Application
+├── TaskManagement.Domain
 ├── TaskManagement.Infrastructure
 ├── TaskManagement.Tests
 ```
