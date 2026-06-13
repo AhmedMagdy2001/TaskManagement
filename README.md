@@ -133,14 +133,39 @@ Includes:
 
 ---
 
-# 📁 Project Structure
-
+## 📂 Project Structure
+```markdown
 TaskManagement
 ├── TaskManagement.API
+│   ├── Controllers
+│   │   ├── AdminController.cs
+│   │   ├── TasksController.cs
+│   │   ├── AuthController.cs
+│   ├── Middleware
+│   │   ├── ExceptionMiddleware.cs
+│   ├── Persistence
+│   │   ├── AppDbContext.cs
+│   ├── Services
+│   │   ├── JwtService.cs
+│   │   ├── RedisCacheService.cs
+│   ├── Background
+│   │   ├── TaskQueue.cs
+│   │   ├── TaskProcessingWorker.cs
 ├── TaskManagement.Application
-├── TaskManagement.Domain
+│   ├── Domain
+│   │   ├── Task.cs
+│   │   ├── Project.cs
+│   │   ├── User.cs
+│   ├── Infrastructure
+│   │   ├── DatabaseContext.cs
+│   │   ├── Repository.cs
 ├── TaskManagement.Infrastructure
-└── TaskManagement.Tests
+│   ├── Database
+│   │   ├── DatabaseContext.cs
+│   │   ├── Migration.cs
+│   ├── Repository
+│   │   ├── Repository.cs
+```
 
 ---
 
