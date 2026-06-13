@@ -137,34 +137,9 @@ Includes:
 ```markdown
 TaskManagement
 ├── TaskManagement.API
-│   ├── Controllers
-│   │   ├── AdminController.cs
-│   │   ├── TasksController.cs
-│   │   ├── AuthController.cs
-│   ├── Middleware
-│   │   ├── ExceptionMiddleware.cs
-│   ├── Persistence
-│   │   ├── AppDbContext.cs
-│   ├── Services
-│   │   ├── JwtService.cs
-│   │   ├── RedisCacheService.cs
-│   ├── Background
-│   │   ├── TaskQueue.cs
-│   │   ├── TaskProcessingWorker.cs
 ├── TaskManagement.Application
-│   ├── Domain
-│   │   ├── Task.cs
-│   │   ├── Project.cs
-│   │   ├── User.cs
-│   ├── Infrastructure
-│   │   ├── DatabaseContext.cs
-│   │   ├── Repository.cs
 ├── TaskManagement.Infrastructure
-│   ├── Database
-│   │   ├── DatabaseContext.cs
-│   │   ├── Migration.cs
-│   ├── Repository
-│   │   ├── Repository.cs
+├── TaskManagement.Tests
 ```
 
 ---
